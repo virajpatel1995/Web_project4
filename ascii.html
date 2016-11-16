@@ -1,0 +1,73 @@
+<!--
+CSCI 4300 : Web Programming
+Viraj Patel  Project 4 
+File: ascii.html
+// creates the basic layout as requirment using html tags and css that named 
+	ascii.css 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>ASCIImation</title>
+		<link rel="stylesheet" href="ascii.css">
+	</head>
+
+	<body>
+		<h1>CSE 190 M ASCII Animation Viewer</h1>
+		
+		<textarea id="mytextarea" rows="20" cols="80" onchange="textChange()"></textarea>
+		
+			<fieldset>
+				<legend>Play Controls:</legend>
+				<button class="start" id="start" onclick="start()">Start</button>
+				<button class="start" id="stop" onclick="stop()">Stop</button>
+			</fieldset>
+			
+			<fieldset>
+				<legend>Animation:</legend>
+				<select id="animation" onchange="animation()">
+					<option value="blank">Blank</option>
+					<option value="custom">Custom</option>
+					<option value="exercise">Exercise</option>
+					<option value="juggler">Juggler</option>
+					<option value="bike">Bike</option>
+					<option value="dive">Dive</option>
+				</select>
+			</fieldset>
+			
+			<fieldset>
+				<legend>Size:</legend>
+				<select id="size" onchange="sizeC()">
+					<option value="7px">Tiny</option>
+					<option value="10px">Small</option>
+					<option value="12px" selected="selected">Medium</option>
+					<option value="16px">Large</option>
+					<option value="24px">Extra Large</option>
+					<option value="32px">XXL</option>
+				</select>
+			</fieldset>
+			
+			<fieldset>
+				<legend>Speed:</legend>
+				  <input type="checkbox" id="Turbo" onchange="checkBox()"/> Turbo
+			</fieldset>
+<br>	
+<a href="https://validator.w3.org/">
+<img src="http://cobweb.cs.uga.edu/~mehdi/teaching/4300/images/w3c-html.png" alt="htmImg" />
+</a>
+<br><br>
+<a href="https://jigsaw.w3.org/css-validator/">
+<img src="http://cobweb.cs.uga.edu/~mehdi/teaching/4300/images/w3c-css.png" alt="cssImg"/>
+</a>
+<br><br>
+<a href="http://www.jslint.com/">
+<img src="https://s3.postimg.org/vqqxe57oj/190_Mjslint.png" alt="jLint"/>
+</a>		
+
+		<script src="ascii.js"></script>
+		<script src="myanimation.js"></script>
+		
+	</body>
+</html>
